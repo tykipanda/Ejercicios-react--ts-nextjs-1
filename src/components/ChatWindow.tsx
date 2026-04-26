@@ -13,3 +13,8 @@ interface ChatWindowProps {
 export function ChatWindow({ messages, isLoading }: ChatWindowProps) {
   // useRef apunta al elemento del fondo del chat
   const bottomRef = useRef<HTMLDivElement>(null);
+
+  // Cada vez que llega un mensaje, hace scroll al fondo
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, isLoading]);
