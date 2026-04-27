@@ -34,7 +34,8 @@ export function ChatWindow({ messages, isLoading }: ChatWindowProps) {
       {/* Muesta el skeleton mientras espera respuesta */}
       {isLoading && <SkeletonBubble />}
 
-      
+      {/* Elemento invisible al que hacemos scroll */}
+      <div ref={bottonRef} />
     </div>
   );
 }
