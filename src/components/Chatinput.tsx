@@ -9,3 +9,11 @@ interface ChatInputProps {
 
 export function ChatInput({ onSend, disabled }: ChatInputProps) {
   const [value, setValue] = useState('');
+
+    const handleSend = () => {
+    if (!value.trim() || disabled) return;
+    onSend(value.trim());
+    setValue(''); // limpia el campo
+  };
+
+};
