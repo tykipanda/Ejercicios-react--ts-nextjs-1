@@ -31,6 +31,9 @@ export function ChatWindow({ messages, isLoading }: ChatWindowProps) {
         <ChatBubble key={msg.id} message={msg} />
       ))}
 
+      {/* Muesta el skeleton mientras espera respuesta */}
+      {isLoading && <SkeletonBubble />}
+
       
     </div>
   );
