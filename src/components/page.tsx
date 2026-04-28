@@ -20,5 +20,16 @@ export default function ChatPage() {
     setMessages(prev => [...prev, userMessage]);
     setIsLoading(true);
 
-        // 2. Simula delay de 2 segundos (aqui conectaras la IA real)
+    // 2. Simula delay de 2 segundos (aqui conectaras la IA real)
     await new Promise(resolve => setTimeout(resolve, 2000));
+
+    // 3. Agrega respuesta simulada del asistente
+    const assistantMessage: Message = {
+      id: crypto.randomUUID(),
+      role: 'assistant',
+      content: 'Recibiste: "' + content + '". Aqui conectaras la IA real.',
+      timestamp: new Date(),
+    };
+    setMessages(prev => [...prev, assistantMessage]);
+    setIsLoading(false);
+  };
