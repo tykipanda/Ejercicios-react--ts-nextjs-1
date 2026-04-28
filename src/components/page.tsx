@@ -45,3 +45,5 @@ export default function ChatPage() {
     </div>
   );
 }
+
+// falta ejercutar la app y corregir errores //
