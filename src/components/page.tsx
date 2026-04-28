@@ -17,3 +17,5 @@ export default function ChatPage() {
       content,
       timestamp: new Date(),
     };
+    setMessages(prev => [...prev, userMessage]);
+    setIsLoading(true);
