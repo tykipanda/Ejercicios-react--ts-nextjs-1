@@ -7,3 +7,8 @@ interface UseLLMStreamReturn {
   startStream: (message: string) => Promise<void>;
   reset: () => void;
 }
+
+export function useLLMStream(): UseLLMStreamReturn {
+  const [streamingText, setStreamingText] = useState('');
+  const [isStreaming, setIsStreaming] = useState(false);
+  const [error, setError] = useState<string | null>(null);
