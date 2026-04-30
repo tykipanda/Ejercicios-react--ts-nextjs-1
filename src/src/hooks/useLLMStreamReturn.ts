@@ -41,6 +41,12 @@ export function useLLMStream(): UseLLMStreamReturn {
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
 
+      // Loop: lee chunk por chunk hasta que done === true
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+
 
 
 
