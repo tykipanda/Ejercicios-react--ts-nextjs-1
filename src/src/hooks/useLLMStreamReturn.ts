@@ -60,6 +60,14 @@ export function useLLMStream(): UseLLMStreamReturn {
     }
   }, []);
 
+  const reset = useCallback(() => {
+    abortControllerRef.current?.abort();
+    setStreamingText('');
+    setIsStreaming(false);
+    setError(null);
+  }, []);
+
+
 
 
 
