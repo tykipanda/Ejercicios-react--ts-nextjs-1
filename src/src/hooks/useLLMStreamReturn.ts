@@ -48,7 +48,7 @@ export function useLLMStream(): UseLLMStreamReturn {
 
       // Decodifica los bytes a texto y los acumula
         const chunk = decoder.decode(value, { stream: true });
-        setStreamingText(prev => prev + chunk);
+        setStreamingText( prev => prev + chunk);
       }
 
       } catch (err) {
@@ -67,13 +67,6 @@ export function useLLMStream(): UseLLMStreamReturn {
     setError(null);
   }, []);
 
-
-
-
-
-
-
-
-
-
-
+  
+  return { streamingText, isStreaming, error, startStream, reset };
+}
