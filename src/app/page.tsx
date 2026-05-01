@@ -28,3 +28,11 @@ setMessages(prev => [...prev, userMessage]);
 const displayMessages: Message[] = [...messages];
   if (isStreaming && streamingText) {
     displayMessages.push({
+      id: 'streaming',
+      role: 'assistant',
+      content: streamingText + '|', // el | simula cursor parpadeante
+      timestamp: new Date(),
+      isStreaming: true,
+    });
+  }
+
