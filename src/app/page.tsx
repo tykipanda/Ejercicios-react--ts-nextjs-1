@@ -9,3 +9,10 @@ import { useLLMStream } from '@/hooks/useLLMStream';
 export default function ChatPage() {
   const [messages, setMessages] = useState<Message[]>([]);
   const { streamingText, isStreaming, startStream } = useLLMStream();
+
+  const handleSend = async (content: string) => {
+    const userMessage: Message = {
+      id: crypto.randomUUID(),
+      role: 'user', content,
+      timestamp: new Date(),
+    };
