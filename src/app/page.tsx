@@ -17,3 +17,8 @@ export default function ChatPage() {
       timestamp: new Date(),
     };
 setMessages(prev => [...prev, userMessage]);
+
+
+    // El hook maneja todo el streaming internamente
+    await startStream(content);
+};
