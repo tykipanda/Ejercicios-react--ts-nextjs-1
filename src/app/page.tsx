@@ -16,3 +16,4 @@ export default function ChatPage() {
       role: 'user', content,
       timestamp: new Date(),
     };
+setMessages(prev => [...prev, userMessage]);
