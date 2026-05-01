@@ -22,3 +22,9 @@ setMessages(prev => [...prev, userMessage]);
     // El hook maneja todo el streaming internamente
     await startStream(content);
 };
+
+// Construye la lista de mensajes para mostrar.
+// Si hay streaming activo, agrega un mensaje temporal.
+const displayMessages: Message[] = [...messages];
+  if (isStreaming && streamingText) {
+    displayMessages.push({
