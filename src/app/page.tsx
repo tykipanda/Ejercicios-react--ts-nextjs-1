@@ -36,3 +36,9 @@ const displayMessages: Message[] = [...messages];
     });
   }
 
+  return (
+    <div className="flex flex-col h-screen max-w-2xl mx-auto">
+      <div className="p-4 border-b border-gray-200">
+        <h1 className="text-xl font-bold">Chat con Streaming</h1>
+      </div>
+
