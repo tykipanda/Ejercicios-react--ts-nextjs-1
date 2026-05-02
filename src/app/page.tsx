@@ -45,4 +45,8 @@ const displayMessages: Message[] = [...messages];
         messages={displayMessages}
         isLoading={isStreaming && !streamingText}
       />
+      <ChatInput onSend={handleSend} disabled={isStreaming} />
+    </div>
+  );
+}
 
