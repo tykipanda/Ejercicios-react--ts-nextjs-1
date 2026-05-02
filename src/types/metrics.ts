@@ -5,3 +5,10 @@ export interface MetricPoint {
     memoryUsageMb: number;   // memoria usada en MB
     errorRate: number;       // porcentaje de errores 0-100
 }
+
+export interface DashboardState {
+  metrics: MetricPoint[];
+  isRunning: boolean;
+  totalTokens: number;
+  avgLatency: number;
+}
