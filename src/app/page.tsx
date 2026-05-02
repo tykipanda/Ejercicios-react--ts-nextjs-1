@@ -41,4 +41,8 @@ const displayMessages: Message[] = [...messages];
       <div className="p-4 border-b border-gray-200">
         <h1 className="text-xl font-bold">Chat con Streaming</h1>
       </div>
+      <ChatWindow
+        messages={displayMessages}
+        isLoading={isStreaming && !streamingText}
+      />
 
