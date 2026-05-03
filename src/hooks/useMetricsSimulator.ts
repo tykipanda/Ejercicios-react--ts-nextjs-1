@@ -43,3 +43,12 @@ export function useMetricsSimulator() {
                 const avgLatency = Math.round(
                  newMetrics.reduce((a, m) => a + m.latencyMs, 0) / newMetrics.length
                 );
+                return {
+                 ...prev,
+                 metrics: newMetrics,
+                 totalTokens: prev.totalTokens + Math.floor(newPoint.tokensPerSecond),
+                 avgLatency,
+                };
+            });
+        }, 1000);
+
