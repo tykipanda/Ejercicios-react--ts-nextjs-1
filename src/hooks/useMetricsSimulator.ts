@@ -52,3 +52,8 @@ export function useMetricsSimulator() {
             });
         }, 1000);
 
+        // Limpieza: detiene el interval cuando el componente desmonta
+        return () => clearInterval(interval);
+        }, [state.isRunning]);
+
+  
