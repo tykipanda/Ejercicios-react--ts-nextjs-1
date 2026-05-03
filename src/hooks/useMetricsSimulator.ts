@@ -31,6 +31,7 @@ export function useMetricsSimulator() {
     setState({ metrics: [], isRunning: false, totalTokens: 0, avgLatency: 0 });
     }, []);
 
+    useEffect(() => {
+        if (!state.isRunning) return;
 
-
-
+        // Generar un nuevo punto de metrica cada segundo
