@@ -19,4 +19,6 @@ export function useMetricsSimulator() {
         metrics: [], isRunning: false, totalTokens: 0, avqLatency: 0,
     });
 
-    
+      const start = useCallback(() => {
+    setState(prev => ({ ...prev, isRunning: true }));
+    }, []);
