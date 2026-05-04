@@ -19,5 +19,13 @@ export function TokensChart({ data }: { data: MetricPoint[] }) {
         Tokens por Segundo
       </h3>
         <ResponsiveContainer width="100%" height={200}>
-        <AreaChart data={formatted}>
+         <AreaChart data={formatted}>
+            <defs>
+            <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#2563EB" stopOpacity={0.3}/>
+              <stop offset="95%" stopColor="#2563EB" stopOpacity={0}/>
+            </linearGradient>
+          </defs>
+
+
 
