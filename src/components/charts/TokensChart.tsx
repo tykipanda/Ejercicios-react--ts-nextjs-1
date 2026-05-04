@@ -34,6 +34,10 @@ export function TokensChart({ data }: { data: MetricPoint[] }) {
             stroke="#2563EB" fill="url(#grad)"
             strokeWidth={2} dot={false} name="Tokens/s" />
         </AreaChart>
+        </ResponsiveContainer>
+    </div>
+    );
+}
 
 
 
