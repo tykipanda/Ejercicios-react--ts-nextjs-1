@@ -18,3 +18,6 @@ export function TokensChart({ data }: { data: MetricPoint[] }) {
       <h3 className="font-semibold text-gray-700 mb-4">
         Tokens por Segundo
       </h3>
+        <ResponsiveContainer width="100%" height={200}>
+        <AreaChart data={formatted}>
+
