@@ -55,5 +55,8 @@ export function useMetricsSimulator() {
         // Limpieza: detiene el interval cuando el componente desmonta
         return () => clearInterval(interval);
         }, [state.isRunning]);
+ return {...state, start, stop, reset };
+}
+
 
   
