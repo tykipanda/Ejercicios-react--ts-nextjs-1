@@ -26,6 +26,15 @@ export function TokensChart({ data }: { data: MetricPoint[] }) {
               <stop offset="95%" stopColor="#2563EB" stopOpacity={0}/>
             </linearGradient>
           </defs>
+          <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+          <XAxis dataKey="time" tick={{ fontSize: 10 }} />
+          <YAxis tick={{ fontSize: 10 }} />
+          <Tooltip />
+          <Area type="monotone" dataKey="tokens"
+            stroke="#2563EB" fill="url(#grad)"
+            strokeWidth={2} dot={false} name="Tokens/s" />
+        </AreaChart>
+
 
 
 
