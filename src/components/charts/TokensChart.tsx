@@ -38,7 +38,3 @@ export function TokensChart({ data }: { data: MetricPoint[] }) {
     </div>
     );
 }
-
-
-
-
