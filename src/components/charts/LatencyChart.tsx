@@ -11,3 +11,8 @@ export function LatencyChart({ data }: { data: MetricPoint[] }) {
     time: new Date(d.timestamp).toLocaleTimeString(),
     latency: Math.round(d.latencyMs),
   }));
+
+return (
+    <div className="bg-white p-4 rounded-xl shadow-sm border">
+      <h3 className="font-semibold text-gray-700 mb-4">Latencia (ms)</h3>
+
