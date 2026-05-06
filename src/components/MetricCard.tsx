@@ -14,3 +14,5 @@ const colorMap = {
 };
 
 export function MetricCard({ title, value, unit, icon, color }: MetricCardProps) {
+  return (
+    <div className={'p-4 rounded-xl border-2 ' + colorMap[color]}>
