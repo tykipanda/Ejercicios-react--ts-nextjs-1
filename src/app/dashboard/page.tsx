@@ -42,11 +42,14 @@ export default function DashboardPage() {
           </button>
         </div>
       </div>
-      
+
       {/* Tarjetas de metricas principales */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <MetricCard title="Tokens Totales" icon="T"
           value={totalTokens.toLocaleString()} color="blue" />
+        <MetricCard title="Tokens/s" icon="V"
+          value={lastMetric ? Math.round(lastMetric.tokensPerSecond) : 0}
+          unit="/s" color="green" />
 
 
 
