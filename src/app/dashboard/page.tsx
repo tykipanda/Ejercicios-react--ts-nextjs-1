@@ -52,3 +52,7 @@ export default function DashboardPage() {
           unit="/s" color="green" />
         <MetricCard title="Latencia prom." icon="L"
           value={avgLatency} unit="ms" color="yellow" />
+        <MetricCard title="Tasa de error" icon="E"
+          value={lastMetric ? lastMetric.errorRate.toFixed(1) : '0.0'}
+          unit="%" color="red" />
+      </div>
