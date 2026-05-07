@@ -40,5 +40,13 @@ export default function DashboardPage() {
                        text-gray-600 hover:bg-gray-100">
             Resetear
           </button>
+        </div>
+      </div>
+      
+      {/* Tarjetas de metricas principales */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <MetricCard title="Tokens Totales" icon="T"
+          value={totalTokens.toLocaleString()} color="blue" />
+
 
 
