@@ -62,3 +62,6 @@ export default function DashboardPage() {
         <TokensChart data={metrics} />
         <LatencyChart data={metrics} />
       </div>
+
+      {/* Estado inicial */}
+      {!isRunning && metrics.length === 0 && (
