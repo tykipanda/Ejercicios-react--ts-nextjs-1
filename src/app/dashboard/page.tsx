@@ -35,4 +35,10 @@ export default function DashboardPage() {
           >
             {isRunning ? 'Detener' : 'Iniciar'}
           </button>
+          <button onClick={reset}
+            className="px-4 py-2 rounded-lg border border-gray-300
+                       text-gray-600 hover:bg-gray-100">
+            Resetear
+          </button>
+
 
