@@ -70,5 +70,5 @@ export default function DashboardPage() {
           <p>Presiona Iniciar para ver las metricas en tiempo real</p>
         </div>
       )}
-      
+    </div>
 
