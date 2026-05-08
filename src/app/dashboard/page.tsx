@@ -69,4 +69,6 @@ export default function DashboardPage() {
           <p className="text-5xl mb-4">-</p>
           <p>Presiona Iniciar para ver las metricas en tiempo real</p>
         </div>
+      )}
+      
 
