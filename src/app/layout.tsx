@@ -16,6 +16,7 @@ export default function RootLayout({
           <Link href="/dashboard" className="text-green-600 hover:underline font-medium">
             Dashboard IA
           </Link>
+          </nav>
 
 
       </body>
