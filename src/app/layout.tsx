@@ -18,9 +18,7 @@ export default function RootLayout({
           </Link>
           </nav>
           {children}
-
-
       </body>
     </html>
-  )
+  );
 }
