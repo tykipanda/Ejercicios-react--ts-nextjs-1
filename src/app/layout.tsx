@@ -13,6 +13,10 @@ export default function RootLayout({
           <Link href="/" className="text-blue-600 hover:underline font-medium">
             Chat
           </Link>
+          <Link href="/dashboard" className="text-green-600 hover:underline font-medium">
+            Dashboard IA
+          </Link>
+
 
       </body>
     </html>
