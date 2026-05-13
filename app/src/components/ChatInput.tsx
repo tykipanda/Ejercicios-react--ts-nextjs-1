@@ -15,3 +15,11 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
     onSend(value.trim());
     setValue(''); // limpia el campo
   };
+
+ // Enter = enviar, Shift+Enter = salto de linea
+ const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
+    }
+  };
