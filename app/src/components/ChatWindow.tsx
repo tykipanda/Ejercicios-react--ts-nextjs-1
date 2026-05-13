@@ -26,3 +26,7 @@ export function ChatWindow({ messages, isLoading }: ChatWindowProps) {
           <p>Empieza una conversacion...</p>
         </div>
       )}
+
+      {messages.map((msg) => (
+        <ChatBubble key={msg.id} message={msg} />
+      ))}
