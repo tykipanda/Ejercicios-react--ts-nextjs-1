@@ -29,4 +29,8 @@ export default function ChatPage() {
       role: 'assistant',
       content: 'Recibiste: "' + content + '". Aqui conectaras la IA real.',
       timestamp: new Date(),
+      };
+    setMessages(prev => [...prev, assistantMessage]);
+    setIsLoading(false);
+    };
 
