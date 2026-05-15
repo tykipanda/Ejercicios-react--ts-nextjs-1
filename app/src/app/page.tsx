@@ -34,3 +34,16 @@ export default function ChatPage() {
     setIsLoading(false);
     };
 
+    return (
+    <div className="flex flex-col h-screen max-w-2xl mx-auto">
+      <div className="p-4 border-b border-gray-200 bg-white">
+        <h1 className="text-xl font-bold text-gray-800">Chat App</h1>
+        <p className="text-sm text-gray-400">TypeScript + Next.js</p>
+      </div>
+      <ChatWindow messages={messages} isLoading={isLoading} />
+      <ChatInput onSend={handleSend} disabled={isLoading} />
+    </div>
+  );
+}
+
+
