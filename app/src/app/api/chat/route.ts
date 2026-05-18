@@ -13,3 +13,10 @@ export async function POST(request: NextRequest) {
         // Convierte la palabra a bytes y la envia
         const chunk = new TextEncoder().encode(word + ' ');
         controller.enqueue(chunk);
+
+        // Simula el delay de generacion (50ms por token)
+        await new Promise(r => setTimeout(r, 50));
+      }
+      controller.close(); // cierra el stream
+    },
+  });
