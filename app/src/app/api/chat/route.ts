@@ -4,7 +4,7 @@ export async function POST(request: NextRequest) {
   const { message } = await request.json();
   
   // Divide el texto en palabras para simular tokens
-  const words = ('Recibiste tu mensaje: ' + message + '.',
+  const words = ('Recibiste tu mensaje: ' + message + '.' +
     'El streaming esta funcionando correctamente.').split(' ');
 
  const stream = new ReadableStream({
@@ -20,3 +20,12 @@ export async function POST(request: NextRequest) {
       controller.close(); // cierra el stream
     },
   });
+
+  return new Response(stream, {
+    headers: {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Transfer-Encoding': 'chunked',
+    },
+  });
+}
+
