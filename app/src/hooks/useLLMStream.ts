@@ -21,3 +21,7 @@ export function useLLMStream(): UseLLMStreamReturn {
     // Cancela cualquier stream anterior en curso
     abortControllerRef.current?.abort();
     abortControllerRef.current = new AbortController();
+
+    setStreamingText('');
+    setIsStreaming(true);
+    setError(null);
