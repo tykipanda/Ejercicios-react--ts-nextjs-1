@@ -45,3 +45,8 @@ export function useLLMStream(): UseLLMStreamReturn {
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
+
+      // Decodifica los bytes a texto y los acumula
+        const chunk = decoder.decode(value, { stream: true });
+        setStreamingText(prev => prev + chunk);
+      }
