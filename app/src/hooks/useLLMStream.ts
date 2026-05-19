@@ -50,3 +50,12 @@ export function useLLMStream(): UseLLMStreamReturn {
         const chunk = decoder.decode(value, { stream: true });
         setStreamingText(prev => prev + chunk);
       }
+
+      } catch (err) {
+      // AbortError es normal cuando cancelamos un stream
+      if (err instanceof Error && err.name === 'AbortError') return;
+      setError(err instanceof Error ? err.message : 'Error desconocido');
+    } finally {
+      setIsStreaming(false);
+    }
+  }, []);
