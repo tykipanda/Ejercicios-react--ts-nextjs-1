@@ -16,3 +16,8 @@ export function useLLMStream(): UseLLMStreamReturn {
   // AbortController permite cancelar el stream si el usuario
   // envia otro mensaje antes de que termine el actual
   const abortControllerRef = useRef<AbortController | null>(null);
+
+  const startStream = useCallback(async (message: string) => {
+    // Cancela cualquier stream anterior en curso
+    abortControllerRef.current?.abort();
+    abortControllerRef.current = new AbortController();
