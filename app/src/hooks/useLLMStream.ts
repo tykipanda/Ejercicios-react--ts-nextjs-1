@@ -34,3 +34,5 @@ export function useLLMStream(): UseLLMStreamReturn {
         signal: abortControllerRef.current.signal,
       });
 
+      if (!response.ok) throw new Error('Error del servidor');
+      if (!response.body) throw new Error('Sin body en la respuesta');
