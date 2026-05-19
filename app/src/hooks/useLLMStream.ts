@@ -36,3 +36,7 @@ export function useLLMStream(): UseLLMStreamReturn {
 
       if (!response.ok) throw new Error('Error del servidor');
       if (!response.body) throw new Error('Sin body en la respuesta');
+
+      // Abre el lector del stream
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
