@@ -4,46 +4,47 @@ import { useState } from 'react';
 import { Message } from '@/types/chat';
 import { ChatWindow } from '@/components/ChatWindow';
 import { ChatInput } from '@/components/ChatInput';
+import { useLLMStream } from '@/hooks/useLLMStream';
 
 export default function ChatPage() {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const { streamingText, isStreaming, startStream } = useLLMStream();
 
   const handleSend = async (content: string) => {
-    // 1. Agrega el mensaje del usuario a la lista
     const userMessage: Message = {
       id: crypto.randomUUID(),
-      role: 'user',
-      content,
+      role: 'user', content,
       timestamp: new Date(),
     };
     setMessages(prev => [...prev, userMessage]);
-    setIsLoading(true);
 
-    // 2. Simula delay de 2 segundos (aqui conectaras la IA real)
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // El hook maneja todo el streaming internamente
+    await startStream(content);
+  };
 
-    // 3. Agrega respuesta simulada del asistente
-    const assistantMessage: Message = {
-      id: crypto.randomUUID(),
+  // Construye la lista de mensajes para mostrar.
+  // Si hay streaming activo, agrega un mensaje temporal.
+  const displayMessages: Message[] = [...messages];
+  if (isStreaming && streamingText) {
+    displayMessages.push({
+      id: 'streaming',
       role: 'assistant',
-      content: 'Recibiste: "' + content + '". Aqui conectaras la IA real.',
+      content: streamingText + '|', // el | simula cursor parpadeante
       timestamp: new Date(),
-      };
-    setMessages(prev => [...prev, assistantMessage]);
-    setIsLoading(false);
-    };
+      isStreaming: true,
+    });
+  }
 
-    return (
+  return (
     <div className="flex flex-col h-screen max-w-2xl mx-auto">
-      <div className="p-4 border-b border-gray-200 bg-white">
-        <h1 className="text-xl font-bold text-gray-800">Chat App</h1>
-        <p className="text-sm text-gray-400">TypeScript + Next.js</p>
+      <div className="p-4 border-b border-gray-200">
+        <h1 className="text-xl font-bold">Chat con Streaming</h1>
       </div>
-      <ChatWindow messages={messages} isLoading={isLoading} />
-      <ChatInput onSend={handleSend} disabled={isLoading} />
+      <ChatWindow
+        messages={displayMessages}
+        isLoading={isStreaming && !streamingText}
+      />
+      <ChatInput onSend={handleSend} disabled={isStreaming} />
     </div>
   );
 }
-
-
