@@ -7,3 +7,4 @@ const MAX_POINTS = 30; // maximo de puntos visibles en la grafica
 function generateMetric(): MetricPoint {
     return {
         timestamp: Date.now(),
+        tokensPerSecond: Math.random() * 80 + 20,   // entre 20 y 100
