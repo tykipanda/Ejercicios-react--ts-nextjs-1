@@ -66,3 +66,7 @@ export function useLLMStream(): UseLLMStreamReturn {
     setIsStreaming(false);
     setError(null);
   }, []);
+
+    return { streamingText, isStreaming, error, startStream, reset };
+}
+
