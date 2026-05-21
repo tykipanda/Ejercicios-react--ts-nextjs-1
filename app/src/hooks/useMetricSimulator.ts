@@ -8,3 +8,8 @@ function generateMetric(): MetricPoint {
     return {
         timestamp: Date.now(),
         tokensPerSecond: Math.random() * 80 + 20,   // entre 20 y 100
+        latencyMs: Math.random() * 300 + 50,         // entre 50 y 350ms
+        memoryUsageMb: Math.random() * 400 + 800,    // entre 800 y 1200MB
+        errorRate: Math.random() * 5,                 // entre 0% y 5%
+  };
+}
