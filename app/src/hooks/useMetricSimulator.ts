@@ -13,3 +13,9 @@ function generateMetric(): MetricPoint {
         errorRate: Math.random() * 5,                 // entre 0% y 5%
   };
 }
+
+
+export function useMetricsSimulator() {
+  const [state, setState] = useState<DashboardState>({
+    metrics: [], isRunning: false, totalTokens: 0, avgLatency: 0,
+  });
