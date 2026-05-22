@@ -19,3 +19,8 @@ export function useMetricsSimulator() {
   const [state, setState] = useState<DashboardState>({
     metrics: [], isRunning: false, totalTokens: 0, avgLatency: 0,
   });
+
+  const start = useCallback(() => {
+    setState(prev => ({ ...prev, isRunning: true }));
+  }, []);
+ñ
