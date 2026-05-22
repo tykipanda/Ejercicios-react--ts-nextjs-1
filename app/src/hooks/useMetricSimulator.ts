@@ -27,3 +27,7 @@ export function useMetricsSimulator() {
   const stop = useCallback(() => {
     setState(prev => ({ ...prev, isRunning: false }));
   }, []);
+
+  const reset = useCallback(() => {
+    setState({ metrics: [], isRunning: false, totalTokens: 0, avgLatency: 0 });
+  }, []);
