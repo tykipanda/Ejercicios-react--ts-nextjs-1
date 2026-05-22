@@ -31,3 +31,6 @@ export function useMetricsSimulator() {
   const reset = useCallback(() => {
     setState({ metrics: [], isRunning: false, totalTokens: 0, avgLatency: 0 });
   }, []);
+
+  useEffect(() => {
+    if (!state.isRunning) return;
