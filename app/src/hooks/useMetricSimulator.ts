@@ -23,4 +23,7 @@ export function useMetricsSimulator() {
   const start = useCallback(() => {
     setState(prev => ({ ...prev, isRunning: true }));
   }, []);
-ñ
+  
+  const stop = useCallback(() => {
+    setState(prev => ({ ...prev, isRunning: false }));
+  }, []);
