@@ -46,5 +46,8 @@ export function useMetricsSimulator() {
     return {
       ...prev,
       metrics: newMetrics,
+      totalTokens: prev.totalTokens + Math.floor(newPoint.tokensPerSecond),
+      avgLatency,
+        };
 
 
