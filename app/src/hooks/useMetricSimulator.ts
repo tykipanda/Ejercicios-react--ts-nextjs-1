@@ -39,4 +39,9 @@ export function useMetricsSimulator() {
   const interval = setInterval(() => {
     const newPoint = generateMetric();
     setState(prev => {
+      const newMetrics = [...prev.metrics, newPoint].slice(-MAX_POINTS);
+      const avgLatency = Math.round(
+        newMetrics.reduce((a, m) => a + m.latencyMs, 0) / newMetrics.length
+      );
+
 
