@@ -37,4 +37,6 @@ export function useMetricsSimulator() {
 
   // Genera un nuevo punto de metrica cada segundo
   const interval = setInterval(() => {
+    const newPoint = generateMetric();
+    setState(prev => {
 
