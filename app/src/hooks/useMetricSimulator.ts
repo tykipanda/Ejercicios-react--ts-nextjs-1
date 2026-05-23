@@ -34,3 +34,7 @@ export function useMetricsSimulator() {
 
   useEffect(() => {
     if (!state.isRunning) return;
+
+  // Genera un nuevo punto de metrica cada segundo
+  const interval = setInterval(() => {
+
