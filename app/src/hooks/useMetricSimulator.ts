@@ -48,6 +48,9 @@ export function useMetricsSimulator() {
       metrics: newMetrics,
       totalTokens: prev.totalTokens + Math.floor(newPoint.tokensPerSecond),
       avgLatency,
-        };
+     };
+    });
+  }, 1000);
+
 
 
