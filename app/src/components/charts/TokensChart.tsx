@@ -6,3 +6,6 @@ import {
 } from 'recharts';
 
 import { MetricPoint } from '@/types/metrics';
+
+export function TokensChart({ data }: { data: MetricPoint[] }) {
+  const formatted = data.map(d => ({
