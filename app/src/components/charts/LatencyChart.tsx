@@ -17,3 +17,6 @@ export function LatencyChart({ data }: { data: MetricPoint[] }) {
       <h3 className="font-semibold text-gray-700 mb-4">Latencia (ms)</h3>
       <ResponsiveContainer width="100%" height={200}>
         <BarChart data={formatted}>
+        <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+        <XAxis dataKey="time" tick={{ fontSize: 10 }} />
+
