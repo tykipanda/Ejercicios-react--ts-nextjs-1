@@ -33,5 +33,11 @@ return (
           <Area type="monotone" dataKey="tokens"
             stroke="#2563EB" fill="url(#grad)"
             strokeWidth={2} dot={false} name="Tokens/s" />
+                </AreaChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
+
 
 
