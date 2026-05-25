@@ -30,4 +30,8 @@ return (
           <XAxis dataKey="time" tick={{ fontSize: 10 }} />
           <YAxis tick={{ fontSize: 10 }} />
           <Tooltip />
+          <Area type="monotone" dataKey="tokens"
+            stroke="#2563EB" fill="url(#grad)"
+            strokeWidth={2} dot={false} name="Tokens/s" />
+
 
