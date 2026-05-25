@@ -14,3 +14,6 @@ export function LatencyChart({ data }: { data: MetricPoint[] }) {
 
     return (
     <div className="bg-white p-4 rounded-xl shadow-sm border">
+      <h3 className="font-semibold text-gray-700 mb-4">Latencia (ms)</h3>
+      <ResponsiveContainer width="100%" height={200}>
+        <BarChart data={formatted}>
