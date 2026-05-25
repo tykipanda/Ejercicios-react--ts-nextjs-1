@@ -21,4 +21,10 @@ export function LatencyChart({ data }: { data: MetricPoint[] }) {
         <XAxis dataKey="time" tick={{ fontSize: 10 }} />
         <YAxis tick={{ fontSize: 10 }} />
         <Tooltip />
+          <Bar dataKey="latency" fill="#10B981" name="Latencia ms" />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
 
