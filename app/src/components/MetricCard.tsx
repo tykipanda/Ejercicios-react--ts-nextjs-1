@@ -14,3 +14,5 @@ const colorMap = {
   red:    'bg-red-50 text-red-600 border-red-200',
 };
 
+export function MetricCard({ title, value, unit, icon, color }: MetricCardProps) {
+  return (
