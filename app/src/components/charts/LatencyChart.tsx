@@ -19,4 +19,6 @@ export function LatencyChart({ data }: { data: MetricPoint[] }) {
         <BarChart data={formatted}>
         <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
         <XAxis dataKey="time" tick={{ fontSize: 10 }} />
+        <YAxis tick={{ fontSize: 10 }} />
+        <Tooltip />
 
