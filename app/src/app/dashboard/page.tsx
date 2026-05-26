@@ -13,3 +13,7 @@ export default function DashboardPage() {
 
   
   const lastMetric = metrics[metrics.length - 1];
+
+  return (
+    <div className="min-h-screen bg-gray-50 p-6">
+      {/* Encabezado con controles */}
