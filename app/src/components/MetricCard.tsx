@@ -16,3 +16,6 @@ const colorMap = {
 
 export function MetricCard({ title, value, unit, icon, color }: MetricCardProps) {
   return (
+    <div className={'p-4 rounded-xl border-2 ' + colorMap[color]}>
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-2xl">{icon}</span>
