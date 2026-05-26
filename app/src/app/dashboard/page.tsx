@@ -25,3 +25,12 @@ export default function DashboardPage() {
           <p className="text-sm text-gray-500">
             Actualizacion cada segundo
           </p>
+        </div>
+        <div className="flex gap-2">
+          <button
+            onClick={isRunning ? stop : start}
+            className={'px-4 py-2 rounded-lg font-medium text-white ' +
+              (isRunning
+                ? 'bg-red-500 hover:bg-red-600'
+                : 'bg-green-500 hover:bg-green-600')}
+          >
