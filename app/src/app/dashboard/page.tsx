@@ -10,3 +10,6 @@ export default function DashboardPage() {
     metrics, isRunning, totalTokens, avgLatency,
     start, stop, reset
   } = useMetricsSimulator();
+
+  
+  const lastMetric = metrics[metrics.length - 1];
