@@ -21,3 +21,6 @@ export function MetricCard({ title, value, unit, icon, color }: MetricCardProps)
         <span className="text-2xl">{icon}</span>
         <span className="text-xs font-medium opacity-70">{title}</span>
       </div>
+      <div className="flex items-baseline gap-1">
+        <span className="text-3xl font-bold">{value}</span>
+        {unit && <span className="text-sm opacity-70">{unit}</span>}
