@@ -34,3 +34,12 @@ export default function DashboardPage() {
                 ? 'bg-red-500 hover:bg-red-600'
                 : 'bg-green-500 hover:bg-green-600')}
           >
+            {isRunning ? 'Detener' : 'Iniciar'}
+          </button>
+          <button onClick={reset}
+            className="px-4 py-2 rounded-lg border border-gray-300
+                       text-gray-600 hover:bg-gray-100">
+            Resetear
+          </button>
+        </div>
+      </div>
