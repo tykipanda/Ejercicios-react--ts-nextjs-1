@@ -51,3 +51,5 @@ export default function DashboardPage() {
         <MetricCard title="Tokens/s" icon="V"
           value={lastMetric ? Math.round(lastMetric.tokensPerSecond) : 0}
           unit="/s" color="green" />
+        <MetricCard title="Latencia prom." icon="L"
+          value={avgLatency} unit="ms" color="yellow" />
