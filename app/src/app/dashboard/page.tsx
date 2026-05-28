@@ -60,3 +60,7 @@ export default function DashboardPage() {
 
       {/* Graficos en tiempo real */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <TokensChart data={metrics} />
+        <LatencyChart data={metrics} />
+      </div>
+
