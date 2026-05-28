@@ -56,3 +56,4 @@ export default function DashboardPage() {
         <MetricCard title="Tasa de error" icon="E"
           value={lastMetric ? lastMetric.errorRate.toFixed(1) : '0.0'}
           unit="%" color="red" />
+      </div>
