@@ -64,3 +64,7 @@ export default function DashboardPage() {
         <LatencyChart data={metrics} />
       </div>
 
+      {/* Estado inicial */}
+      {!isRunning && metrics.length === 0 && (
+        <div className="text-center py-12 text-gray-400 mt-8">
+
