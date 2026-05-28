@@ -46,3 +46,5 @@ export default function DashboardPage() {
 
       {/* Tarjetas de metricas principales */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <MetricCard title="Tokens Totales" icon="T"
+          value={totalTokens.toLocaleString()} color="blue" />
