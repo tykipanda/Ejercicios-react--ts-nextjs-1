@@ -57,3 +57,6 @@ export default function DashboardPage() {
           value={lastMetric ? lastMetric.errorRate.toFixed(1) : '0.0'}
           unit="%" color="red" />
       </div>
+
+      {/* Graficos en tiempo real */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
