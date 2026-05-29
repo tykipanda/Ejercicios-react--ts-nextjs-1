@@ -69,3 +69,8 @@ export default function DashboardPage() {
         <div className="text-center py-12 text-gray-400 mt-8">
           <p className="text-5xl mb-4">-</p>
           <p>Presiona Iniciar para ver las metricas en tiempo real</p>
+        </div>
+      )}
+    </div>
+  );
+}
