@@ -9,3 +9,4 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
+        <nav className="p-3 border-b flex gap-4 text-sm bg-white">
