@@ -17,3 +17,8 @@ export default function RootLayout({
             Dashboard IA
           </Link>
         </nav>
+        {children}
+      </body>
+    </html>
+  );
+}
